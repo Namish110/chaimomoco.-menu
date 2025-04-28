@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chai Momo Co. Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg-color: #FFF8EE; /* Light creamy background */
+      --card-bg: #FFE1B3; /* Light yellow-orange for cards */
+      --text-color: #4B2E1F; /* Dark brown for text */
+      --heading-color: #D2691E; /* Bright chai orange for headings */
+      --accent-color: #FF8C42; /* Warm orange for accents */
+      --border-color: #8B4513; /* Strong brown for borders */
+      --highlight-color: #FFD580; /* Light yellow for highlights */
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      color: var(--heading-color);
+      font-size: 3rem;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--heading-color);
+      margin-bottom: 12px;
+      display: inline-block;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .combos, .today-special, .special {
+      background: var(--highlight-color);
+      color: var(--text-color);
+      text-align: center;
+      padding: 20px;
+      border-radius: 16px;
+      font-weight: bold;
+      border: 2px dashed var(--border-color);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.2rem;
+      color: var(--heading-color);
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 200px;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 1cm;
+      }
+
+      body {
+        background: white;
+        color: black;
+      }
+
+      .card, .combos, .today-special, .special {
+        background: white !important;
+        box-shadow: none;
+        border: 1px solid #aaa;
+      }
+
+      .footer {
+        color: black;
+      }
+
+      .logo {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="C:\Users\AVITA\Downloads\image.jpg" alt="Chai Momo Logo" class="logo">
+  <h1>Chai Momo Co.</h1>
+  <h2>Swaad ka Adda for Chai & Momos</h2>
+
+  <div class="container">
+
+    <div class="card">
+      <div class="section-title">Chai</div>
+      <ul>
+        <li>Regular Chai (Small) <span>₹15</span></li>
+        <li>Regular Chai (Large) <span>₹30</span></li>
+        <li>Chocolate Chai (Small) <span>₹30</span></li>
+        <li>Chocolate Chai (Large) <span>₹60</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Bun Options</div>
+      <ul>
+        <li>Bun Maska <span>₹25</span></li>
+        <li>Malai Bun <span>₹40</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Maggi Varieties</div>
+      <ul>
+        <li>Plain Maggi <span>₹30</span></li>
+        <li>Veg Maggi <span>₹45</span></li>
+        <li>Cheese Maggi <span>₹60</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Momos</div>
+      <ul>
+        <li>Veg Momos <span>₹40 / ₹60</span></li>
+        <li>Paneer Momos <span>₹50 / ₹70</span></li>
+        <li>Chicken Momos <span>₹50 / ₹70</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Kurkure Momos</div>
+      <ul>
+        <li>Veg Kurkure Momos <span>₹70 / ₹110</span></li>
+        <li>Paneer Kurkure Momos <span>₹80 / ₹120</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Sandwiches</div>
+      <ul>
+        <li>Bombay Masala Sandwich <span>₹50</span></li>
+        <li>Paneer Tikka Sandwich <span>₹70</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Beverages</div>
+      <ul>
+        <li>Water Bottle (10/-) <span>₹10</span></li>
+        <li>Water Bottle (20/-) <span>₹20</span></li>
+        <li>Cold Drink (250ml) <span>₹20</span></li>
+        <li>Coke / Thums Up / Sprite</li>
+      </ul>
+    </div>
+
+    <div class="card combos">
+      ☕ Special Combos ☕ <br><br>
+      Chai + Bun Maska = <b>₹35</b> <br><br>
+      Chocolate Chai + Veg Momos = <b>₹60</b> <br><br>
+      Paneer Tikka Sandwich + Chocolate Chai = <b>₹60</b>
+    </div>
+
+    <div class="card today-special">
+      🎉 Today's Special 🎉 <br>
+      Kurkure Paneer Momos + Chocolate Chai @ <b>₹99</b>!
+    </div>
+
+    <div class="card special">
+      📸 10% Discount on Sharing Instagram Story! <br>
+      📞 Call Us: 7037756180
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Thank you for visiting Chai Momo Stall! ✨ See you again! 🌟
+  </div>
+
+</body>
+</html>
+
+
+
+
+azlTuG6gmeMMCQ9gq8WPB6cQu65atx-9IGOg7SoCcwXkMzUq6llVvYAOuB5T3SDuKsGvicyIrttVoHGDje520JHAb6ds-llohVz85ze_dIx1g5syZqIR9QN9NXZn_7Ks8hnYC-QFAaC9Ym50gWCB5ybvais5MBMmN9F7rlYuuaoczZu9f-RyXyud4D4syfkHpk45kSftpYZqt35_dgoLfZdLJDN7aQrpm4CeBwBestpgzSIdm35f_SmqPF79LpEXoKTsQlG_IqL47wEXsHLo69mZ9Ppin0LwFiY75hlihWeWCOvsyLnKuinoJKD8qbTZ
