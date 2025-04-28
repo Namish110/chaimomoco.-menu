@@ -27,17 +27,29 @@
 
     h1 {
       font-family: 'Pacifico', cursive;
-      text-align: center;
+      text-align: left;
       color: var(--heading-color);
       font-size: 3rem;
       margin-bottom: 5px;
     }
 
     h2 {
-      text-align: center;
+      text-align: left;
       font-size: 1.5rem;
       color: var(--accent-color);
       margin-bottom: 30px;
+    }
+
+    .dflex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      max-width: 200px;
     }
 
     .container {
@@ -102,12 +114,6 @@
       color: var(--heading-color);
     }
 
-    .logo {
-      display: block;
-      margin: 0 auto 20px auto;
-      max-width: 200px;
-    }
-
     @media print {
       @page {
         size: A4;
@@ -136,13 +142,17 @@
   </style>
 </head>
 <body>
-
-  <img src="https://namish110.github.io/chaimomoco.-menu/image-removebg-preview.png" alt="Chai Momo Logo" class="logo">
-  <h1>Chai Momo Co.</h1>
-  <h2>Swaad ka Adda for Chai & Momos</h2>
+  <div class="dflex">
+     <div>
+      <img src="https://namish110.github.io/chaimomoco.-menu/image-removebg-preview.png" alt="Chai Momo Logo" class="logo">
+    </div>
+    <div>
+        <h1>Chai Momo Co.</h1>
+        <h2>Swaad ka Adda for Chai & Momos</h2>
+    </div>
+  </div>
 
   <div class="container">
-
     <div class="card">
       <div class="section-title">Chai</div>
       <ul>
@@ -230,4 +240,3 @@
 
 </body>
 </html>
-
