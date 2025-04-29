@@ -54,13 +54,44 @@
     height: auto;
   }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
   .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-    max-width: 1000px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
+
+  .part {
+    margin-bottom: 30px;
+  }
+
+  .dflex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}
+
 
   .card {
     background: var(--card-bg);
@@ -201,7 +232,10 @@
     </div>
   </div>
 
-  <div class="container">
+<div class="container">
+
+  <!-- PART 1: Main Menu -->
+  <div class="part">
     <div class="card">
       <div class="section-title">Chai</div>
       <ul>
@@ -263,7 +297,10 @@
         <li>Coke / Thums Up / Sprite</li>
       </ul>
     </div>
+  </div>
 
+  <!-- PART 2: Specials, Offers, Feedback -->
+  <div class="part">
     <div class="card combos">
       ☕ Special Combos ☕ <br><br>
       Chai + Bun Maska = <b>₹35</b> <br><br>
@@ -279,19 +316,19 @@
     <div class="card special">
       📸 10% Discount on Sharing an Instagram Story! <br>
       📞 Call Us: 7037756180, 7651856149.<br/>
- <a href="https://www.instagram.com/chai_momo_company/?igsh=MTNhYmgwN25oamZseg%3D%3D#" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; font-weight: bold;">
-  <span style="margin-right: 8px;">Join Us on Instagram</span>
-  <img src="https://namish110.github.io/chaimomoco.-menu/insta-removebg-preview.png" width="75" height="75" alt="Instagram Logo">
-</a>
-</div>
-
+      <a href="https://www.instagram.com/chai_momo_company/?igsh=MTNhYmgwN25oamZseg%3D%3D#" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; font-weight: bold;">
+        <span style="margin-right: 8px;">Join Us on Instagram</span>
+        <img src="https://namish110.github.io/chaimomoco.-menu/insta-removebg-preview.png" width="75" height="75" alt="Instagram Logo">
+      </a>
     </div>
 
+    <div class="cardfeedback">
+      <div class="section-title">Feedback Form</div>
+      <p>Scan the QR code below to give your valuable feedback:</p>
+      <img src="https://namish110.github.io/chaimomoco.-menu/frame (2).png" alt="Feedback QR Code" width="150" height="150">
+    </div>
   </div>
-<div class="cardfeedback">
-  <div class="section-title">Feedback Form</div>
-  <p>Scan the QR code below to give your valuable feedback:</p>
-  <img src="https://namish110.github.io/chaimomoco.-menu/frame (2).png" alt="Feedback QR Code" width= "150" height="150" >
+
 </div>
 
   <div class="footer">
