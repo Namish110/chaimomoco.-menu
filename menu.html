@@ -5,221 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chai Momo Co. Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
-<style>
-  :root {
-    --bg-color: #FFF8EE;
-    --card-bg: #FFE1B3;
-    --text-color: #4B2E1F;
-    --heading-color: #D2691E;
-    --accent-color: #FF8C42;
-    --border-color: #8B4513;
-    --highlight-color: #FFD580;
-  }
-
-  body {
-    font-family: 'Roboto', sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 10px;
-    font-size: 15px;
-  }
-
-  h1 {
-    font-family: 'Pacifico', cursive;
-    text-align: left;
-    color: var(--heading-color);
-    font-size: 2.2rem;
-    margin-bottom: 2px;
-  }
-
-  h2 {
-    text-align: left;
-    font-size: 1.2rem;
-    color: var(--accent-color);
-    margin-bottom: 20px;
-  }
-
-  .dflex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-
-  .logo {
-    max-width: 120px;
-    height: auto;
-  }
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-@media (max-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .part {
-    margin-bottom: 30px;
-  }
-
-  .dflex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .logo {
-    max-width: 120px;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-}
-
-
-  .card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-    border: 1px solid var(--border-color);
-  }
-
-  .card:hover {
-    transform: translateY(-4px);
-  }
-
-  .section-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--heading-color);
-    margin-bottom: 10px;
-    border-bottom: 2px solid var(--accent-color);
-    display: inline-block;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    font-size: 1rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 0;
-    border-bottom: 1px dashed var(--border-color);
-  }
-
-  .combos, .today-special, .special {
-    background: var(--highlight-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 15px;
-    border-radius: 12px;
-    font-weight: bold;
-    border: 2px dashed var(--border-color);
-  }
-
-  .footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1rem;
-    color: var(--heading-color);
-  }
-
-  .cardfeedback {
-    border: 2px dashed var(--border-color);
-    padding: 10px;
-    background: var(--highlight-color);
-    border-radius: 12px;
-    max-width: 1000px;
-    margin: 15px auto;
-    text-align: center;
-  }
-
-  .cardfeedback img {
-    margin-top: 10px;
-  }
-
-  @media screen and (max-width: 600px) {
-    h1 {
-      font-size: 1.8rem;
-    }
-
-    h2 {
-      font-size: 1rem;
-    }
-
-    li {
-      font-size: 0.95rem;
-    }
-
-    .combos, .today-special, .special {
-      font-size: 0.95rem;
-      padding: 10px;
-    }
-
-    .section-title {
-      font-size: 1.1rem;
-    }
-
-    .dflex {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .logo {
-      max-width: 100px;
-    }
-  }
-
-  @media print {
-    @page {
-      size: A4;
-      margin: 1cm;
+  <style>
+    :root {
+      --bg-color: #FFF8EE; /* Light creamy background */
+      --card-bg: #FFE1B3; /* Light yellow-orange for cards */
+      --text-color: #4B2E1F; /* Dark brown for text */
+      --heading-color: #D2691E; /* Bright chai orange for headings */
+      --accent-color: #FF8C42; /* Warm orange for accents */
+      --border-color: #8B4513; /* Strong brown for borders */
+      --highlight-color: #FFD580; /* Light yellow for highlights */
     }
 
     body {
-      background: white;
-      color: black;
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      font-size: 16px;
     }
 
-    .card, .combos, .today-special, .special {
-      background: white ! important;
-      box-shadow: none;
-      border: 1px solid #aaa;
+    h1 {
+      font-family: 'Pacifico', cursive;
+      text-align: left;
+      color: var(--heading-color);
+      font-size: 3rem;
+      margin-bottom: 5px;
     }
 
-    .footer {
-      color: black;
+    h2 {
+      text-align: left;
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      margin-bottom: 30px;
+    }
+
+    .dflex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
     }
 
     .logo {
-      box-shadow: none;
+      max-width: 200px;
     }
-  }
-</style>
 
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+.cardfeedback {
+    border: 2px dashed var(--border-color);
+    padding: 10px;
+    background: var(--highlight-color);
+    border-radius: 12px;
+    max-width: 1175px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+    .card: hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--heading-color);
+      margin-bottom: 12px;
+      display: inline-block;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .combos, .today-special, .special {
+      background: var(--highlight-color);
+      color: var(--text-color);
+      text-align: center;
+      padding: 20px;
+      border-radius: 16px;
+      font-weight: bold;
+      border: 2px dashed var(--border-color);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.2rem;
+      color: var(--heading-color);
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 1cm;
+      }
+
+      body {
+        background: white;
+        color: black;
+      }
+
+      .card, .combos, .today-special, .special {
+        background: white! important;
+        box-shadow: none;
+        border: 1px solid #aaa;
+      }
+
+      .footer {
+        color: black;
+      }
+
+      .logo {
+        box-shadow: none;
+      }
+     
+
+    }
+  </style>
 </head>
 <body>
   <div class="dflex">
@@ -232,10 +164,7 @@
     </div>
   </div>
 
-<div class="container">
-
-  <!-- PART 1: Main Menu -->
-  <div class="part">
+  <div class="container">
     <div class="card">
       <div class="section-title">Chai</div>
       <ul>
@@ -297,10 +226,7 @@
         <li>Coke / Thums Up / Sprite</li>
       </ul>
     </div>
-  </div>
 
-  <!-- PART 2: Specials, Offers, Feedback -->
-  <div class="part">
     <div class="card combos">
       ☕ Special Combos ☕ <br><br>
       Chai + Bun Maska = <b>₹35</b> <br><br>
@@ -316,19 +242,19 @@
     <div class="card special">
       📸 10% Discount on Sharing an Instagram Story! <br>
       📞 Call Us: 7037756180, 7651856149.<br/>
-      <a href="https://www.instagram.com/chai_momo_company/?igsh=MTNhYmgwN25oamZseg%3D%3D#" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; font-weight: bold;">
-        <span style="margin-right: 8px;">Join Us on Instagram</span>
-        <img src="https://namish110.github.io/chaimomoco.-menu/insta-removebg-preview.png" width="75" height="75" alt="Instagram Logo">
-      </a>
+ <a href="https://www.instagram.com/chai_momo_company/?igsh=MTNhYmgwN25oamZseg%3D%3D#" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; font-weight: bold;">
+  <span style="margin-right: 8px;">Join Us on Instagram</span>
+  <img src="https://namish110.github.io/chaimomoco.-menu/insta-removebg-preview.png" width="75" height="75" alt="Instagram Logo">
+</a>
+</div>
+
     </div>
 
-    <div class="cardfeedback">
-      <div class="section-title">Feedback Form</div>
-      <p>Scan the QR code below to give your valuable feedback:</p>
-      <img src="https://namish110.github.io/chaimomoco.-menu/frame (2).png" alt="Feedback QR Code" width="150" height="150">
-    </div>
   </div>
-
+<div class="cardfeedback">
+  <div class="section-title">Feedback Form</div>
+  <p>Scan the QR code below to give your valuable feedback:</p>
+  <img src="https://namish110.github.io/chaimomoco.-menu/frame (2).png" alt="Feedback QR Code" width= "150" height="150" >
 </div>
 
   <div class="footer">
